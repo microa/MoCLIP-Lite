@@ -1,4 +1,4 @@
-# MoCLIP-Lite: Motion Vector-based Lightweight Video Action Recognition
+# MoCLIP-Lite: Efficient Video Recognition by Fusing CLIP with Motion Vectors
 
 A lightweight video action recognition framework that combines Motion Vectors (MV) with CLIP for efficient video understanding on the UCF-101 dataset.
 
