@@ -5,10 +5,10 @@ import os
 import numpy as np
 
 # 从模块化文件中导入
-from dataloader_coviar import UCF101_TSN_Dataset
-from model import MV_TSN_Model
+from data.dataloader_coviar import UCF101_TSN_Dataset
+from models.model import MV_TSN_Model
 # Import new class
-from transforms_video import GroupCenterSample
+from data.transforms_video import GroupCenterSample
 
 def main():
     device = "cuda" if torch.cuda.is_available() else "cpu"

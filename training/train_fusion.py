@@ -8,9 +8,9 @@ import numpy as np
 
 # Core imports
 from torchvision import transforms
-from dataloader_coviar import UCF101_TSN_Dataset
-from model import MV_TSN_Model 
-from transforms_video import GroupMultiScaleCrop, GroupRandomHorizontalFlip, GroupScale, GroupCenterCrop
+from data.dataloader_coviar import UCF101_TSN_Dataset
+from models.model import MV_TSN_Model 
+from data.transforms_video import GroupMultiScaleCrop, GroupRandomHorizontalFlip, GroupScale, GroupCenterCrop
 
 class LateFusionModel(nn.Module):
     def __init__(self, num_classes, mv_model_path, clip_feature_dim=512):

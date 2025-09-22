@@ -21,8 +21,8 @@ def main():
     # --- 1. Configuration ---
     device = "cuda" if torch.cuda.is_available() else "cpu"
     ROOT_VIDEO_DIR = "/home/mbin/data/ucf101/mpeg4_videos"
-    PROMPT_TEMPLATES_FILE = 'prompt_templates.json'
-    CLASS_MAPPINGS_FILE = 'class_mappings.json'
+    PROMPT_TEMPLATES_FILE = 'configs/prompt_templates.json'
+    CLASS_MAPPINGS_FILE = 'configs/class_mappings.json'
     OUTPUT_FILE = "ucf101_zeroshot_text_features.pt"
 
     print(f"Using device: {device}")

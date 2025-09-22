@@ -5,7 +5,7 @@ from tqdm import tqdm
 import numpy as np # Still need numpy for final accuracy calculation
 
 # Import our validated Dataloader class
-from dataloader import UCF101Dataset 
+from data.dataloader import UCF101Dataset 
 
 def run_zeroshot_evaluation():
     # 1. Configuration

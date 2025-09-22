@@ -10,7 +10,7 @@ import time
 import random
 
 # Import our dataloader
-from dataloader_coviar import UCF101_TSN_Dataset
+from data.dataloader_coviar import UCF101_TSN_Dataset
 
 # Data augmentation classes
 class GroupMultiScaleCrop:

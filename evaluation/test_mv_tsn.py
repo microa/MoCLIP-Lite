@@ -5,9 +5,9 @@ import os
 import numpy as np
 
 # 从模块化文件中导入
-from dataloader_coviar import UCF101_TSN_Dataset
-from model import MV_TSN_Model
-from transforms_video import GroupOverSample
+from data.dataloader_coviar import UCF101_TSN_Dataset
+from models.model import MV_TSN_Model
+from data.transforms_video import GroupOverSample
 
 def main():
     device = "cuda" if torch.cuda.is_available() else "cpu"

@@ -5,9 +5,9 @@ import os
 import numpy as np
 
 # Import from modular files
-from dataloader_coviar import UCF101_Fusion_Dataset # Use new Fusion Dataloader
-from train_fusion import LateFusionModel # Import model from fusion training script
-from transforms_video import GroupOverSample
+from data.dataloader_coviar import UCF101_Fusion_Dataset # Use new Fusion Dataloader
+from training.train_fusion import LateFusionModel # Import model from fusion training script
+from data.transforms_video import GroupOverSample
 
 def main():
     device = "cuda" if torch.cuda.is_available() else "cpu"

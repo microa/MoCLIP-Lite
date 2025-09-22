@@ -49,6 +49,11 @@ cd MoCLIP-Lite
 pip install -r requirements.txt
 ```
 
+3. Install the package (optional, for development):
+```bash
+pip install -e .
+```
+
 ## 📊 Dataset Preparation
 
 1. Download UCF-101 dataset and extract to your data directory
@@ -60,48 +65,67 @@ pip install -r requirements.txt
 ### Training MV-TSN Model
 
 ```bash
-python train_mv_tsn.py --data_root /path/to/ucf101 --mv_root /path/to/motion_vectors
+python training/train_mv_tsn.py --data_root /path/to/ucf101 --mv_root /path/to/motion_vectors
 ```
 
 ### Training Fusion Model
 
 ```bash
-python train_fusion.py --mv_model_path mv_tsn_best_model.pth --data_root /path/to/ucf101
+python training/train_fusion.py --mv_model_path mv_tsn_best_model.pth --data_root /path/to/ucf101
 ```
 
 ### Zero-shot Evaluation
 
 ```bash
-python evaluate_zeroshot.py --data_root /path/to/ucf101 --mv_root /path/to/motion_vectors
+python evaluation/evaluate_zeroshot.py --data_root /path/to/ucf101 --mv_root /path/to/motion_vectors
 ```
 
 ### Testing Final Fusion Model
 
 ```bash
-python test_fusion_final.py --model_path fusion_best_model.pth --data_root /path/to/ucf101
+python evaluation/test_fusion_final.py --model_path fusion_best_model.pth --data_root /path/to/ucf101
 ```
 
 ## 📁 Project Structure
 
 ```
 MoCLIP-Lite/
-├── model.py                 # MV-TSN model definition
-├── train_mv_tsn.py         # MV model training
-├── train_fusion.py         # Fusion model training
-├── train_mv_only.py        # MV-only training
-├── dataloader.py           # Basic data loader
-├── dataloader_coviar.py    # TSN data loader
-├── transforms_video.py     # Video transformations
-├── mv_quiver.py           # Motion vector visualization
-├── mv_to_rgb.py           # MV to RGB conversion
-├── evaluate_zeroshot.py   # Zero-shot evaluation
-├── test_fusion_final.py   # Fusion model testing
-├── test_mv_tsn.py         # MV model testing
-├── generate_text_features.py    # Text feature generation
-├── precompute_clip_features.py  # CLIP feature precomputation
-├── class_mappings.json    # Class name mappings
-├── prompt_templates.json  # Text prompt templates
-└── README.md              # This file
+├── README.md                    # Project documentation
+├── LICENSE                      # MIT License
+├── requirements.txt             # Python dependencies
+├── setup.py                     # Package installation script
+├── configs/                     # Configuration files
+│   ├── __init__.py
+│   ├── class_mappings.json      # Class name mappings
+│   └── prompt_templates.json    # Text prompt templates
+├── data/                        # Data processing modules
+│   ├── __init__.py
+│   ├── dataloader.py            # Basic data loader
+│   ├── dataloader_coviar.py     # TSN data loader
+│   └── transforms_video.py      # Video transformations
+├── models/                      # Model definitions
+│   ├── __init__.py
+│   └── model.py                 # MV-TSN model definition
+├── training/                    # Training scripts
+│   ├── __init__.py
+│   ├── train_mv_tsn.py          # MV model training
+│   ├── train_fusion.py          # Fusion model training
+│   └── train_mv_only.py         # MV-only training
+├── evaluation/                  # Evaluation and testing
+│   ├── __init__.py
+│   ├── evaluate_zeroshot.py     # Zero-shot evaluation
+│   ├── test_fusion_final.py     # Fusion model testing
+│   ├── test_mv_tsn.py           # MV model testing
+│   └── test_mv_tsn_32.py        # MV model testing (32 segments)
+├── utils/                       # Utility functions
+│   ├── __init__.py
+│   ├── mv_quiver.py             # Motion vector visualization
+│   ├── mv_to_rgb.py             # MV to RGB conversion
+│   ├── generate_text_features.py    # Text feature generation
+│   └── precompute_clip_features.py  # CLIP feature precomputation
+└── scripts/                     # Example scripts
+    ├── __init__.py
+    └── example_usage.py         # Usage examples
 ```
 
 ## 🎨 Visualization
@@ -109,7 +133,7 @@ MoCLIP-Lite/
 The framework includes tools for visualizing motion vectors and generating qualitative analysis reports:
 
 ```bash
-python mv_quiver.py --input_dir /path/to/motion_vectors --output_dir /path/to/visualizations
+python utils/mv_quiver.py --input_dir /path/to/motion_vectors --output_dir /path/to/visualizations
 ```
 
 ## 📈 Results

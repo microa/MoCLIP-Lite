@@ -8,7 +8,7 @@ from tqdm import tqdm
 import os
 
 # Import collate_fn
-from dataloader import UCF101Dataset, collate_fn
+from data.dataloader import UCF101Dataset, collate_fn
 
 def train_one_epoch(model, train_loader, criterion, optimizer, device):
     """训练一个epoch的函数"""

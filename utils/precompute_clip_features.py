@@ -5,7 +5,7 @@ from tqdm import tqdm
 import os
 
 # 导入我们最开始那个只加载原始视频帧的Dataloader
-from dataloader import UCF101Dataset 
+from data.dataloader import UCF101Dataset 
 
 def main():
     device = "cuda" if torch.cuda.is_available() else "cpu"
