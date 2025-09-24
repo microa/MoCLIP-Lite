@@ -145,10 +145,10 @@ The model achieves competitive performance on UCF-101 dataset with significantly
 If you use this code in your research, please cite our paper:
 
 ```bibtex
-@article{moclip_lite_2025,
+@article{huang2025mocliplite,
   title={MoCLIP-Lite: Efficient Video Recognition by Fusing CLIP with Motion Vectors},
-  author={Binhua Huang, Ni Wang, Arjun Pakrashi, Soumyabrata Dev},
-  journal={Arxiv},
+  author={Huang, Binhua and Wang, Nan and Parakash, Arjun and Dev, Soumyabrata},
+  journal={arXiv preprint arXiv:2509.17084},
   year={2025}
 }
 ```
