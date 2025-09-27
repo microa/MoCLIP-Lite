@@ -167,3 +167,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - CLIP model by OpenAI
 - EfficientNet by Google Research
 - PyTorch and the open-source community
+
+
