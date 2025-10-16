@@ -23,6 +23,6 @@ runs/
 outputs/
 checkpoints/
 
-# Raw datasets (如果你把数据放进了 repo 里，避免推上去)
+# Raw datasets
 data/ucf101/mpeg4_videos/
 data/hmdb51/mpeg4_videos/

@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
-echo ">>> install_coviar_u73090.sh: building FFmpeg 3.4.8 and coviar on this machine"
+echo ">>> install_coviar_u73090.sh: build FFmpeg 3.4.8 and coviar on this machine"
+
+# 推荐在conda环境里执行（如果没有会跳过）
 conda activate mccar || true
 
 sudo apt-get update
