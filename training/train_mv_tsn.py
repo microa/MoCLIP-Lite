@@ -136,8 +136,8 @@ def run_training_loop(model, train_loader, val_loader, criterion, optimizer, num
 def main():
     device = "cuda" if torch.cuda.is_available() else "cpu"
     DATA_ROOT = "/home/mbin/data/ucf101/mpeg4_videos"
-    TRAIN_LIST_FILE = "/home/mbin/data/datalists/ucf101_split1_train.txt"
-    TEST_LIST_FILE  = "/home/mbin/data/datalists/ucf101_split1_test.txt"
+    TRAIN_LIST_FILE = "/home/mbin/data/ucf101/datalists/ucf101_split1_train.txt"
+    TEST_LIST_FILE  = "/home/mbin/data/ucf101/datalists/ucf101_split1_test.txt"
     
     # Hyperparameters
     NUM_CLASSES = 101
